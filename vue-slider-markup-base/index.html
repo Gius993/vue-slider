@@ -28,22 +28,26 @@
                     </div>
     
                     <div class="thumbs">
-                        <div class="prev"></div>
+                        <div @click="showElementPrev()" class="prev"></div>
                         <div @click="showElement()" class="next"></div>
-                        <div class="thumb" v-for="( image, index ) in slides" :class="{ 'active': index === activeElement }">
-                            <img src="img/01.jpg" alt="Svezia"/>
-                        </div>
-                        <div class="thumb" v-for="( image, index ) in slides" :class="{ 'active': index === activeElement }">
-                            <img src="img/02.jpg" alt="Svizzera" />
-                        </div>
-                        <div class="thumb" v-for="( image, index ) in slides" :class="{ 'active': index === activeElement }">
-                            <img src="img/03.jpg" alt="Gran Bretagna" />
-                        </div>
-                        <div class="thumb" v-for="( image, index ) in slides" :class="{ 'active': index === activeElement }">
-                            <img src="img/04.jpg" alt="Germania" />
-                        </div>
-                        <div class="thumb" v-for="(image, index) in slides" :class="{ 'active': index === activeElement }">
-                            <img src="img/05.jpg" alt="Paradise" />
+                        <div>
+
+                            <div  v-for="(image, index) in slides" :class="{ 'active': index === activeElement }" class="thumb">
+                                <img :src="'img/' +  slides [activeElement].image" alt="Svezia"/>
+                            </div>
+                           <!-- <div class="thumb">
+                                <img :src="'img/' +  slides [activeElement].image" alt="Svizzera" />
+                            </div>
+                            <div class="thumb">
+                                <img :src="'img/' +  slides [activeElement].image" alt="Gran Bretagna" />
+                            </div>
+                            <div class="thumb">
+                                <img :src="'img/' +  slides [activeElement].image" alt="Germania" />
+                            </div>
+                            <div class="thumb">
+                                <img :src="'img/' +  slides [activeElement].image" alt="Paradise" />
+                            </div> -->
+                        
                         </div>
                     </div>
     

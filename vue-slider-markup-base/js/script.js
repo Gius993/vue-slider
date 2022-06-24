@@ -69,6 +69,13 @@ var app = new Vue(
                     this.activeElement = 0;
                 }
                 
+            },
+            showElementPrev(){
+                if(this.activeElement > 0){
+                    this.activeElement--;
+                }else{
+                    this.activeElement = this.slides.length-1
+                }
             }
         }
     }
