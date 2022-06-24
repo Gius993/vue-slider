@@ -29,20 +29,20 @@
     
                     <div class="thumbs">
                         <div class="prev"></div>
-                        <div class="next"></div>
-                        <div class="thumb active">
+                        <div @click="showElement()" class="next"></div>
+                        <div class="thumb" v-for="( image, index ) in slides" :class="{ 'active': index === activeElement }">
                             <img src="img/01.jpg" alt="Svezia"/>
                         </div>
-                        <div class="thumb">
+                        <div class="thumb" v-for="( image, index ) in slides" :class="{ 'active': index === activeElement }">
                             <img src="img/02.jpg" alt="Svizzera" />
                         </div>
-                        <div class="thumb">
+                        <div class="thumb" v-for="( image, index ) in slides" :class="{ 'active': index === activeElement }">
                             <img src="img/03.jpg" alt="Gran Bretagna" />
                         </div>
-                        <div class="thumb">
+                        <div class="thumb" v-for="( image, index ) in slides" :class="{ 'active': index === activeElement }">
                             <img src="img/04.jpg" alt="Germania" />
                         </div>
-                        <div class="thumb">
+                        <div class="thumb" v-for="(image, index) in slides" :class="{ 'active': index === activeElement }">
                             <img src="img/05.jpg" alt="Paradise" />
                         </div>
                     </div>

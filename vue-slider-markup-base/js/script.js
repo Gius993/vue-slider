@@ -60,6 +60,16 @@ var app = new Vue(
                     text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
                 }
             ]
+        },
+        methods: {
+            showElement() {
+                if(this.activeElement < this.slides.length - 1){
+                    this.activeElement++;
+                }else{
+                    this.activeElement = 0;
+                }
+                
+            }
         }
     }
 );
