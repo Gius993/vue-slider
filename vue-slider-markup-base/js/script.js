@@ -30,10 +30,8 @@ var app = new Vue(
     {
         el: '#root',
         data: {
-           activeElement: 0,
-            slides : [
-
-        
+            activeElement: 0,
+            slides: [
                 {
                     image: '01.jpg',
                     title: 'Svezia',

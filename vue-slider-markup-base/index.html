@@ -32,8 +32,8 @@
                         <div @click="showElement()" class="next"></div>
                         <div>
 
-                            <div  v-for="(image, index) in slides" :class="{ 'active': index === activeElement }" class="thumb">
-                                <img :src="'img/' +  slides [activeElement].image" alt="Svezia"/>
+                            <div  v-for="(slide, index) in slides" :class="{ 'active': index === activeElement }" class="thumb">
+                                <img :src="'img/' + slide.image" alt="Svezia"/>
                             </div>
                            <!-- <div class="thumb">
                                 <img :src="'img/' +  slides [activeElement].image" alt="Svizzera" />
